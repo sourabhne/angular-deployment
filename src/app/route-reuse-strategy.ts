@@ -2,7 +2,7 @@ import { ActivatedRouteSnapshot, RouteReuseStrategy, DetachedRouteHandle, UrlSeg
 
 export class CustomReuseStrategy implements RouteReuseStrategy {
 
-  storedHandles: { [key: string]: DetachedRouteHandle } = {};
+  storedHandles: { [reuseRoute: string]: DetachedRouteHandle } = {};
 
   shouldDetach(route: ActivatedRouteSnapshot): boolean {
     return route.data.reuseRoute || false;

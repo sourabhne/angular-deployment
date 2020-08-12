@@ -1,0 +1,7 @@
+export interface NavbarItem {
+  displayName: string;
+  disabled?: boolean;
+  iconName: string;
+  route?: string;
+  children?: NavbarItem[];
+}

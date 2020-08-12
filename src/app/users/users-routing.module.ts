@@ -5,8 +5,16 @@ import { UserSingleComponent } from './user-single/user-single.component';
 
 
 const routes: Routes = [
-  {path: '',   component: UserListComponent},
-  {path: ':username', component: UserSingleComponent}
+  {
+    path: '',
+    component: UserListComponent,
+    data: {reuseRoute : true}
+  },
+  {
+    path: ':username',
+    component: UserSingleComponent,
+    data: {reuseRoute : true}
+  }
 ];
 
 @NgModule({

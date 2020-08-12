@@ -8,6 +8,8 @@ import { Routes, RouterModule } from '@angular/router';
 const routes: Routes = [
   { path: '', pathMatch: 'full', component: TestComponent},
   { path: 'test', component: TestComponent},
+  { path: 'students', loadChildren: () => import('./students/students.module').then(m => m.StudentsModule)},
+
   { path: 'company', component: CompanyComponent, data: {reuseRoute : true}},
   { path: 'details/:username', component: CompanydetailsComponent, data: {reuseRoute : true}},
   { path: 'users', loadChildren: () => import('./users/users.module').then(m => m.UsersModule)}
